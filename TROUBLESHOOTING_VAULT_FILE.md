@@ -48,7 +48,7 @@ Use a YAML Linter/Parser: To help pinpoint the exact location of the error, use 
 
 Troubleshooting
 ============
-Use :set list and :set nolist to look for speacial characters.  Make sure we don't have any tabs.
-Make sure any passwords that have special characters ( @ is a special character ) are surrounded by double quotes ""
-Reflecting on your vault password it should be a much stronger password.  Make sure to update it in the automation platform vault credential after you update your online vault.
+Use :set list and :set nolist to look for speacial characters.  Make sure we don't have any tabs.<br>
+Make sure any passwords that have special characters ( @ is a special character ) are surrounded by double quotes ""<br>
+Reflecting on your vault password it should be a much stronger password.  Make sure to update it in the automation platform vault credential after you update your online vault.<br>
 Use the Setup - AAP - CAC job template to test your file. Once the vault file is properly formated you will get past that error.
