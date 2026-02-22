@@ -45,3 +45,10 @@ Use Quotes for Special Characters: If a value legitimately needs to start with a
 Check Jinja2 Templates: If you are using Jinja2 templating, ensure the file extension is .yml.j2, and the rendered output forms a valid YAML structure.
 Use a YAML Linter/Parser: To help pinpoint the exact location of the error, use an online YAML parser or a linter like yamllint.
 ```
+
+Troubleshooting
+============
+Use :set list and :set nolist to look for speacial characters.  Make sure we don't have any tabs.
+Make sure any passwords that have special characters ( @ is a special character ) are surrounded by double quotes ""
+Reflecting on your vault password it should be a much stronger password.  Make sure to update it in the automation platform vault credential after you update your online vault.
+Use the Setup - AAP - CAC job template to test your file. Once the vault file is properly formated you will get past that error.
