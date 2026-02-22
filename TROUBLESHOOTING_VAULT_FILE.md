@@ -22,3 +22,26 @@ The interesting part of the message:
 Syntax Error while loading YAML.
     found character that cannot start any token
 ```
+Google search for the following:
+```
+found character that cannot start any token ansible yaml file
+```
+AI Overview
+```
+The character that most commonly causes the error "found character that cannot start any token" in Ansible YAML files is the tab character (\t). YAML mandates the use of spaces for indentation, not tabs.
+Home Assistant
+Home Assistant
+ +1
+This error also occurs with other characters when they appear at the beginning of a line or after a colon without proper quoting, as they have special meaning in YAML:
+@: This symbol is reserved for future use in YAML and cannot start a scalar (value) unless it is enclosed in quotes, e.g., foo: "@bar".
+%: This character, often found in Jinja2 templates for control flow ({% ... %}), can trigger this error if the file has a .yml extension instead of .yml.j2, or if the rendered output starts with %. Quoting the string can resolve this issue.
+&, *, [, {, |, >, -, ?, :: These are all special characters in YAML used for specific syntax (anchors, aliases, lists, mappings, etc.) and generally cannot start a plain scalar without being quoted.
+TeX - LaTeX Stack Exchange
+TeX - LaTeX Stack Exchange
+ +4
+How to Fix the Error
+Replace Tabs with Spaces: The most frequent solution is to configure your code editor (like VS Code, Sublime Text, etc.) to use spaces instead of tabs for indentation in YAML files. You may need to manually remove existing tabs.
+Use Quotes for Special Characters: If a value legitimately needs to start with a special character like @ or %, enclose the entire value in double or single quotes, e.g., from: "{{ ansible_host }}@domain.com".
+Check Jinja2 Templates: If you are using Jinja2 templating, ensure the file extension is .yml.j2, and the rendered output forms a valid YAML structure.
+Use a YAML Linter/Parser: To help pinpoint the exact location of the error, use an online YAML parser or a linter like yamllint.
+```
